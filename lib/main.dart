@@ -41,6 +41,7 @@ class myhome extends StatelessWidget {
             ),
             SizedBox(height: 20),
             MyContainer(),
+            SpacingTextWidget(),
           ],
         ),
       ),
@@ -61,6 +62,20 @@ class MyContainer extends StatelessWidget {
         color: Colors.amberAccent,
         borderRadius: BorderRadius.circular(15),
       ),
+    );
+  }
+}
+
+class SpacingTextWidget extends StatelessWidget {
+  const SpacingTextWidget({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return const Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text('umam king', style: TextStyle(fontSize: 20, letterSpacing: 5)),
+      ],
     );
   }
 }
