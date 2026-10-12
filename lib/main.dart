@@ -42,6 +42,7 @@ class myhome extends StatelessWidget {
             SizedBox(height: 20),
             MyContainer(),
             SpacingTextWidget(),
+            OverflowTextWidget(),
           ],
         ),
       ),
@@ -76,6 +77,26 @@ class SpacingTextWidget extends StatelessWidget {
       children: [
         Text('umam king', style: TextStyle(fontSize: 20, letterSpacing: 5)),
       ],
+    );
+  }
+}
+class OverflowTextWidget extends StatelessWidget {
+  const OverflowTextWidget({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: double.infinity,
+      padding: const EdgeInsets.all(10),
+      decoration: BoxDecoration(
+        border: Border.all()
+      ),
+      child: const Text(
+        'aku adalah seorang engineering yang handal'
+        'saya berpengalaman selama 10 tahun',
+        maxLines: 2,
+        overflow: TextOverflow.ellipsis,
+      )
     );
   }
 }
