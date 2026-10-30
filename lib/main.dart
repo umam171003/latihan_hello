@@ -6,7 +6,7 @@ void main() {
 
 //stl
 class UmamApp extends StatelessWidget {
-  const UmamApp({super.key});
+  const UmamApp({super.key}); 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
